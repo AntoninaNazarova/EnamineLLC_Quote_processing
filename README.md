@@ -1,5 +1,5 @@
 # EnamineLLC_Quote_processing
-This repository features Python scripts that utilize the RDKit library to process compound orders from Enamine. 
+This repository features Python scripts that utilize the RDKit library to process Enamine quotes (yes, it can be challenging!). 
 
 This repository features Python scripts that utilize the RDKit library to process compound orders from Enamine.Typically, you might receive fewer synthesized compounds than ordered. For the collaborators conducting testing, it's crucial to have comprehensive experimental data, including details like the quantity of the compound in each vial, among other aspects.
 

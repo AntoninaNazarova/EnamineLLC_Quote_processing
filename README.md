@@ -1,2 +1,8 @@
 # EnamineLLC_Quote_processing
 This repository features Python scripts that utilize the RDKit library to process compound orders from Enamine. 
+
+This repository features Python scripts that utilize the RDKit library to process compound orders from Enamine.Typically, you might receive fewer synthesized compounds than ordered. For the collaborators conducting testing, it's crucial to have comprehensive experimental data, including details like the quantity of the compound in each vial, among other aspects.
+
+Upon receiving your compounds, you will also get an Excel file from Enamine, named with the prefix “PO-***.xlsx”. This file contains important information such as the “Amount” of each compound and its “Status”. To integrate this data with your initial order list, typically stored in an SDF format like “Your_quote.sdf”, you'll need to merge these two files. This process is straightforward if you've used a consistent identification code for your compounds, such as a “BRI-ID”. In this case, use the script "ID_merge.py".
+
+If you did not specify an ID when sending your request to Enamine, your first step is to convert their "SMILES" strings into RDkit molecular structures. After converting the "SMILES" data (Enamine uses canonical SMILES), you will need to compare and merge the relevant columns from the converted Excel file (.xlsx) into your SDF file. For this purpose, you can use two Python scripts: "SMILES_convert.py" for the conversion of "SMILES" to "ROMol" structures, and "ID_merge2.py" to facilitate the merging of data from the Excel file into your SDF file. This process ensures that the molecular data from Enamine is accurately integrated with your existing dataset, maintaining consistency and reliability in your compound information.
